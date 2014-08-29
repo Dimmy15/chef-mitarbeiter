@@ -18,14 +18,15 @@ directory "/opt/mongo/db" do
 end
 
 # Remove Mongodb if already present
-
-docker_container 'mongodb' do
-  signal 'QUIT'
-  action :kill
-end
+# Does not work because of https://github.com/bflad/chef-docker/issues/183
+#docker_container 'mongodb' do
+#  signal 'QUIT'
+#  action :kill
+#end
 
 
 # Create it
+# Does not work if container already present because of previos bug
 
 docker_image 'tile/we_mongodb:v1'
 
