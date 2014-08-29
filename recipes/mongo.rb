@@ -19,7 +19,7 @@ end
 
 # Remove Mongodb if already present
 
-docker_container 'shipyard' do
+docker_container 'mongodb' do
   signal 'QUIT'
   action :kill
 end
