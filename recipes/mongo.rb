@@ -24,6 +24,6 @@ docker_container 'tile/we_mongodb:v1' do
   port '5001:28017'
   #env 'SETTINGS_FLAVOR=local'
   volume '/opt/mongo/db:/data/db'
-  cmd_timeout 600
+  cmd_timeout 6000
   command '--rest --httpinterface'
 end
