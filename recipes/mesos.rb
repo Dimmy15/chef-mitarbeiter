@@ -33,7 +33,7 @@ apt_repository "mesosphere" do
 end
 
 package "mesos" do
-  version "0.19.1"
+#  version "0.19.1"
   action :install
 end
 

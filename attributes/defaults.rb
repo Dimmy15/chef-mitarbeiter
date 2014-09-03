@@ -1,4 +1,6 @@
-default[:mesos] = {
+include_recipe "mesos"
+
+override[:mesos] = {
   :type    => "mesosphere",
   :mesosphere => {
     :with_zookeeper => true

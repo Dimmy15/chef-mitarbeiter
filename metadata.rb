@@ -10,4 +10,5 @@ recipe 'mitarbeiterapp::mongo', 'Installs/Configures mongo container'
 recipe 'mitarbeiterapp::mesos', 'Installs/Configures mongo container'
 
 depends 'docker'
+depends 'mesos'
 
