@@ -39,3 +39,4 @@ docker_container 'tile/we_mongodb:v1' do
   cmd_timeout 6000
   command '--rest --httpinterface'
 end
+
