@@ -7,6 +7,6 @@ override[:mesos] = {
   },
   :version => "0.19.1",
   :slave   => {
-    :isolation=> "cgroups/cpu,cgroups/mem"
+    :isolation=> "external"
   }
 }

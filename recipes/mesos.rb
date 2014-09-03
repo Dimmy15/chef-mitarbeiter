@@ -4,8 +4,20 @@
 # 59196eb8b80ecb409ca9d4c70b00c7bcbdfda02ba00096de05c475a285a92413 *mesos-0.19.1-1.0.redhat64.x86_64.rpm
 
 
+include_recipe "mesos"
 
-#mesos::mesosphere
+override[:mesos] = {
+  :type    => "mesosphere",
+  :mesosphere => {
+    :with_zookeeper => true
+  },
+  :version => "0.19.1",
+  :slave   => {
+    :isolation=> "external"
+  }
+}
+
+mesos::mesosphere
 
 
 #[mesos][master] = {
@@ -24,18 +36,18 @@
 #}
 
 
-apt_repository "mesosphere" do
-  uri "http://repos.mesosphere.io"
-  distribution node['lsb']['codename']
-  components ["main"]
-  keyserver "keyserver.ubuntu.com"
-  key "E56151BF"
-end
+#apt_repository "mesosphere" do
+#  uri "http://repos.mesosphere.io"
+#  distribution node['lsb']['codename']
+#  components ["main"]
+#  keyserver "keyserver.ubuntu.com"
+#  key "E56151BF"
+#end
 
-package "mesos" do
+#package "mesos" do
 #  version "0.19.1"
-  action :install
-end
+#  action :install
+#end
 
 
 #config_hash = {
