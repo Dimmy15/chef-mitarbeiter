@@ -38,18 +38,18 @@ package "mesos" do
 end
 
 
-config_hash = {
-  clientPort: 2181, 
-  dataDir: '/var/lib/zookeeper', 
-  tickTime: 2000,
-  autopurge: {
-    snapRetainCount: 1,
-    purgeInterval: 1
-  }
-}
+#config_hash = {
+#  clientPort: 2181, 
+#  dataDir: '/var/lib/zookeeper', 
+#  tickTime: 2000,
+#  autopurge: {
+#    snapRetainCount: 1,
+#    purgeInterval: 1
+#  }
+#}
 
-zookeeper_config '/opt/zookeeper/zookeeper-3.4.6/conf/zoo.cfg' do
-  config config_hash
-  user   'zookeeper'
-  action :render
-end
+#zookeeper_config '/opt/zookeeper/zookeeper-3.4.6/conf/zoo.cfg' do
+#  config config_hash
+#  user   'zookeeper'
+#  action :render
+#end
