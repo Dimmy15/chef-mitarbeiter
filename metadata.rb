@@ -11,4 +11,5 @@ recipe 'mitarbeiterapp::mesos', 'Installs/Configures mongo container'
 
 depends 'docker'
 depends 'mesos'
+#depends 'mesos::master'
 

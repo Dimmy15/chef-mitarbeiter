@@ -4,20 +4,21 @@
 # 59196eb8b80ecb409ca9d4c70b00c7bcbdfda02ba00096de05c475a285a92413 *mesos-0.19.1-1.0.redhat64.x86_64.rpm
 
 
-include_recipe "mesos"
 
-override[:mesos] = {
-  :type    => "mesosphere",
-  :mesosphere => {
-    :with_zookeeper => true
-  },
-  :version => "0.19.1",
-  :slave   => {
-    :isolation=> "external"
-  }
-}
+include_recipe 'mesos:master'
 
-mesos::mesosphere
+#override[:mesos] = {
+#  :type    => "mesosphere",
+#  :mesosphere => {
+#    :with_zookeeper => true
+#  },
+#  :version => "0.19.1",
+#  :slave   => {
+#    :isolation=> "external"
+#  }
+#}
+
+#mitarbeiterapp::mesos::master
 
 
 #[mesos][master] = {
