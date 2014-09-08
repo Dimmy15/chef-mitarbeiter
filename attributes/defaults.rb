@@ -10,10 +10,10 @@ default[:zookeeper][:service_style] = 'upstart'
 
 
 
-default['mesos']['version']                       = '0.19.1-1.0.ubuntu1204'
+default['mesos']['version']                       = '0.19.1-1.0.ubuntu1404'
 default['mesos']['cluster_name']                  = 'MitarbeiterApp'
 default['mesos']['isolation_type']                = 'external'
-default['mesos']['zookeeper_server_list']         = ['172.10.10.20']
+default['mesos']['zookeeper_server_list']         = ['172.30.0.17']
 default['mesos']['set_ec2_hostname']              = false
 
 # attributes under default['mesos']['slave'] are written to /etc/mesos-slave/$key = $value
