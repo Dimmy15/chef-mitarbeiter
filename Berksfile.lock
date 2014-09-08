@@ -1,22 +1,21 @@
 DEPENDENCIES
   apt
   docker (~> 0.35.2)
-  mesos
-    git: git://github.com/everpeace/cookbook-mesos.git
-    revision: 8aa253b5c6db849d014ee5a35b4aa95c416c8a89
+  marathon (~> 1.0.1)
+  mesos (~> 1.0.6)
   minitest-handler
   mitarbeiterapp
     path: .
     metadata: true
-  zookeeper (~> 2.4.1)
+  pleaserun
+    git: https://github.com/paulczar/chef-pleaserun
+    revision: db3a7426832f3a946ff1df35779e7285db74939a
+  zookeeper
+    git: https://github.com/SimpleFinance/chef-zookeeper
+    revision: dccd33cd2c276be6384e413eee3421ee4a2bf66b
 
 GRAPH
-  7-zip (1.0.2)
-    windows (>= 1.2.2)
   apt (2.5.3)
-  ark (0.9.0)
-    7-zip (>= 0.0.0)
-    windows (>= 0.0.0)
   aufs (0.1.1)
     apt (>= 0.0.0)
     modules (>= 0.0.0)
@@ -53,38 +52,41 @@ GRAPH
   java (1.27.0)
   lxc (1.1.8)
     dpkg_autostart (~> 0.1.10)
-  maven (1.1.0)
-    ark (~> 0.4)
-    java (~> 1.13)
-  mesos (0.1.1)
-    build-essential (>= 0.0.0)
+  marathon (1.0.1)
+    apt (>= 0.0.0)
     java (>= 0.0.0)
-    maven (>= 0.0.0)
-    python (>= 0.0.0)
-    ulimit (>= 0.0.0)
+    mesos (>= 0.0.0)
+    runit (>= 0.0.0)
+    zookeeper (>= 0.0.0)
+  mesos (1.0.6)
+    apt (>= 0.0.0)
+    docker (>= 0.0.0)
+    java (>= 0.0.0)
+    yum (~> 3.0)
+    zookeeper (>= 0.0.0)
   minitest-handler (1.3.2)
     chef_handler (>= 0.0.0)
   mitarbeiterapp (0.0.0)
+    apt (>= 0.0.0)
     docker (>= 0.0.0)
+    marathon (>= 0.0.0)
     mesos (>= 0.0.0)
+    zookeeper (>= 0.0.0)
   modules (0.2.0)
   ohai (2.0.1)
-  python (1.4.6)
-    build-essential (>= 0.0.0)
-    yum-epel (>= 0.0.0)
+  pleaserun (0.1.1)
   runit (1.5.10)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   sysctl (0.6.0)
     ohai (>= 0.0.0)
-  ulimit (0.3.2)
   windows (1.34.2)
     chef_handler (>= 0.0.0)
   yum (3.3.0)
   yum-epel (0.5.1)
     yum (~> 3.0)
-  zookeeper (2.4.1)
+  zookeeper (2.4.3)
     build-essential (>= 2.0.2)
     java (>= 0.0.0)
     runit (>= 0.0.0)

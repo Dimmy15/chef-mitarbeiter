@@ -10,4 +10,7 @@
   "uris": [ ],
   "ports": [27017,28017],
   "cmd": "/usr/bin/mongod --rest --httpinterface"
+  "URI": "http://blabla"
 }
+
+

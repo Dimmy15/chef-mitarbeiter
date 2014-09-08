@@ -8,8 +8,22 @@ version '0.0.0'
 
 recipe 'mitarbeiterapp::mongo', 'Installs/Configures mongo container'
 recipe 'mitarbeiterapp::mesos', 'Installs/Configures mongo container'
+recipe 'mitarbeiterapp::zookeeper', 'Installs/Configures mongo container'
+recipe 'mitarbeiterapp::zookeeper', 'Installs/Configures mongo container'
+
 
 depends 'docker'
+depends 'apt'
+depends 'docker'
+depends 'zookeeper'
 depends 'mesos'
-#depends 'mesos::master'
+depends 'marathon'
+
+
+provides 'mitarbeiterapp::mongo'
+provides 'mitarbeiterapp::mesos-slave'
+provides 'mitarbeiterapp::mesos-master'
+provides 'mitarbeiterapp::zookeeper'
+#provides 'mitarbeiterapp::zookeeper'
+
 

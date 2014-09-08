@@ -3,21 +3,51 @@ driver:
   name: vagrant
 
 
-provisioner:
-  name: chef_solo
+#provisioner:
+#  name: chef_solo
 
 platforms:
-  - name: ubuntu-14.04
-    run_list:
-      - recipe[apt]
+  - name: master1
     driver_config:
-      image: "ubuntu:14.04"
+      box: opscode_ubuntu-12.04
+      require_chef_omnibus: 11.14.6
+    driver:
+       network:
+       - ["private_network", {ip: "172.10.10.20"}]
+    run_list:
+      - recipe[apt::default]
+      - recipe[mitarbeiterapp::zookeeper]
+      - recipe[zookeeper::service]
+      - recipe[mitarbeiterapp::mesos-master]
+      - recipe[mitarbeiterapp::mesos-slave]
+ #     - recipe[mesos:slave]
+ 
+  - name: slave1
+    driver_config:
+      box: opscode_ubuntu-12.04
+      require_chef_omnibus: 11.14.6
+    driver:
+       network:
+       - ["private_network", {ip: "172.10.10.21"}]
+    run_list:
+      - recipe[apt::default]
+      #- recipe[mitarbeiterapp::zookeeper]
+      #- recipe[zookeeper::service]
+      #- recipe[mitarbeiterapp::mesos-master]
+      - recipe[mitarbeiterapp::mesos-slave]
+
+
+     
 
 suites:
-  - name: mesosphere_master
-    run_list:
-      - recipe[mitarbeiterapp::mesos]
-    attributes:
+  - name: mesosphere
+    #run_list:
+      #- recipe[apt::default]
+      #- recipe[mitarbeiterapp::zookeeper]
+      #- recipe[zookeeper::service]
+      #- recipe[mitarbeiterapp::mesos]
+ #     - recipe[mesos:slave]
+    #attributes:
   #- name: mesosphere_slave
     #run_list:
       ## master recipe is only for asserting mesos-slave healthy startup.
