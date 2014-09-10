@@ -19,7 +19,7 @@ depends 'zookeeper'
 depends 'mesos'
 depends 'marathon'
 
-
+provides 'mitarbeiterapp'
 provides 'mitarbeiterapp::mongo'
 provides 'mitarbeiterapp::mesos-slave'
 provides 'mitarbeiterapp::mesos-master'

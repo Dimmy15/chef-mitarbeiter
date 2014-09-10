@@ -5,12 +5,12 @@
   },
   "id": "mongodb",
   "instances": "1",
-  "cpus": ".5",
+  "cpus": ".2",
   "mem": "90",
   "uris": [ ],
   "ports": [27017,28017],
   "cmd": "/usr/bin/mongod --rest --httpinterface"
-  "URI": "http://blabla"
+
 }
 
 

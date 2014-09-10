@@ -1,0 +1,14 @@
+{
+  "container": {
+    "image": "docker:///tile/we_backend:18",
+    "options": ["--privileged=false"]
+  },
+  "id": "we_backend",
+  "instances": "1",
+  "cpus": ".5",
+  "mem": "128",
+  "uris": [ ],
+  "ports": [8080,8443],
+  "cmd": ""
+
+}

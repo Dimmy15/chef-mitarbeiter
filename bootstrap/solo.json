@@ -1,0 +1,10 @@
+{
+    "run_list": [
+		"recipe[apt::default]",
+        "recipe[mitarbeiterapp::zookeeper]",
+        "recipe[zookeeper::service]",
+      	"recipe[mitarbeiterapp::mesos-master]",
+    	"recipe[mitarbeiterapp::mesos-slave]"
+    	
+     ]
+}

@@ -1,0 +1,15 @@
+{
+  "container": {
+    "image": "docker:///jenkins",
+    "options": ["-v", "/data1/jenkins:/var/jenkins_home"]
+  },
+  "id": "bobby",
+  "instances": "1",
+  "cpus": "2",
+  "mem": "2048",
+  "uris": [ ],
+  "ports": [8080,50000],
+  "cmd": ""
+}
+
+
