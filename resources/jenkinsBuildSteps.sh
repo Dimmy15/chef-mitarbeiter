@@ -17,8 +17,9 @@ mv dist/we-backend*shaded.jar deployment/docker/backend/we-backend.jar
 
 cd $WORKSPACE/deployment/docker/backend/
 docker build --no-cache=true -t $registryHost:$registryPort/we_backend:$BUILD_NUMBER .
+docker tag $registryHost:$registryPort/we_backend:latest
 docker push $registryHost:$registryPort/we_backend:$BUILD_NUMBER
-
+docker push $registryHost:$registryPort/we_backend:latest
 # Delete all containers
 docker rm $(docker ps -a -q)
 # Delete all images

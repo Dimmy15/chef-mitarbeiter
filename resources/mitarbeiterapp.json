@@ -1,6 +1,6 @@
 {
   "container": {
-    "image": "docker:///hsapp.getcatchapp.com:31843/we_backend:30",
+    "image": "docker:///hsapp.getcatchapp.com:31937/we_backend:latest",
     "options": ["-e", "TEST=TEST"]
   },
   "id": "mitarbeiterapp",
