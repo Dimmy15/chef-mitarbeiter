@@ -1,0 +1,13 @@
+{
+  "container": {
+    "image": "docker:///hsapp.getcatchapp.com:31843/we_backend:30",
+    "options": ["-e", "TEST=TEST"]
+  },
+  "id": "mitarbeiterapp",
+  "instances": "1",
+  "cpus": "2",
+  "mem": "2048",
+  "uris": [ ],
+  "ports": [8080,8443],
+  "cmd": ""
+}

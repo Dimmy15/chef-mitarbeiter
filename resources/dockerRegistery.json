@@ -1,0 +1,13 @@
+{
+  "container": {
+    "image": "docker:///registry",
+    "options": ["-e", "TEST=TEST"]
+  },
+  "id": "registry",
+  "instances": "1",
+  "cpus": "2",
+  "mem": "2048",
+  "uris": [ ],
+  "ports": [5000],
+  "cmd": ""
+}
