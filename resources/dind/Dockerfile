@@ -13,7 +13,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D78692
 RUN apt-get update -qq
 RUN apt-get install -qqy lxc-docker
 
-RUN apt-get install -q -y openjdk-7-jre-headless && apt-get clean
+RUN apt-get install -q -y curl openjdk-7-jre-headless && apt-get clean
 # Jenkins Version from 09.09.2014
 ADD http://mirrors.jenkins-ci.org/war/latest/jenkins.war /opt/jenkins.war
 RUN chmod 644 /opt/jenkins.war
