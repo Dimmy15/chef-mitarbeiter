@@ -5,8 +5,8 @@
   },
   "id": "registry",
   "instances": "1",
-  "cpus": "2",
-  "mem": "2048",
+  "cpus": ".25",
+  "mem": "128",
   "uris": [ ],
   "ports": [5000],
   "cmd": ""

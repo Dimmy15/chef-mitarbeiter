@@ -1,6 +1,6 @@
 {
   "container": {
-    "image": "docker:///tile/jenkinswdocker:latest",
+    "image": "docker:///tile/jenkinswdocker:v2",
     "options": ["-v", "/data1/jenkins:/var/jenkins_home", "--privileged"]
   },
   "id": "bobby",
@@ -8,7 +8,7 @@
   "cpus": "2",
   "mem": "2048",
   "uris": [ ],
-  "ports": [8080,4444],
+  "ports": [8080],
   "cmd": ""
 }
 
